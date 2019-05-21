@@ -76,11 +76,3 @@ function addMenu(parent:HTMLElement, content:Array<itemType>){
 
 const parentElement = document.getElementById(PARENT_ELEMENT_CLASS_ID);
 addMenu(parentElement, menuList);
-
-
-
-
-
-
-
-
