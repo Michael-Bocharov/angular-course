@@ -1,0 +1,90 @@
+
+body {
+    font-family: Arial, serif;
+}
+
+#main{
+    padding-left: 30px;
+}
+
+ul {
+    list-style: none;
+
+    padding-left: 0;
+}
+
+.menu-title {
+    font-weight: bold;
+}
+
+li > a {
+    padding: 6px 25px 6px 12px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+li > ul {
+    display: none;
+
+    padding-left: 15px;
+}
+
+li.on > ul {
+    display: block;
+}
+
+
+.on > a,
+.off > a {
+    position: relative;
+
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.on > a::before,
+.off > a::before {
+    content: '>';
+    box-sizing: border-box;
+
+    position: absolute;
+    top: 9px;
+    right: 8px;
+    padding: 1px 2px;
+    height: 12px;
+    width: 12px;
+
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: #ccc;
+    border-radius: 50%;
+
+    transition: transform .2s, background-color .2s;
+}
+
+.on > a::before {
+    transform: rotate(-90deg)
+}
+
+.off > a::before {
+    transform: rotate(90deg)
+}
+
+#result-block {
+    font-weight: bold;
+    background-color: cornsilk;
+    text-indent: 10px;
+
+    width:300px;
+    height: 18px;
+
+    border-radius: 4px;
+}
+
+#result{
+    font-weight: normal;
+}
